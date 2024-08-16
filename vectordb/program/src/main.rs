@@ -34,14 +34,14 @@ impl VectorDB {
     }
 
     pub fn search(&self, query: &Vec<f64>) -> Option<&Record> {
-        let mut min_similarity = f64::INFINITY;
+        let mut max_similarity: f64 = 0.0;
         let mut closest_record: Option<&Record> = None;
         for record in &self.records {
             let similarity = cosine_similarity(&record.embedding(), query);
 
-            if similarity < min_similarity {
+            if similarity > max_similarity {
                 closest_record = Some(record);
-                min_similarity = similarity;
+                max_similarity = similarity;
             }
         }
 
@@ -62,17 +62,17 @@ pub fn cosine_similarity(v1: &Vec<f64>, v2: &Vec<f64>) -> f64 {
 pub fn main() {
     let mut db: VectorDB = VectorDB::new();
 
-    db.add_embedding(vec![0.1, 0.2, 0.3], "doc1".to_string());
-    db.add_embedding(vec![0.1, 0.2, 0.4], "doc2".to_string());
-    db.add_embedding(vec![0.1, 0.2, 0.5], "doc3".to_string());
-    db.add_embedding(vec![0.1, 0.2, 0.6], "doc4".to_string());
+    db.add_embedding(vec![0.1, 0.2, 0.3, 0.4], "doc1".to_string());
+    db.add_embedding(vec![0.2, 0.2, 0.3, 0.4], "doc2".to_string());
+    db.add_embedding(vec![0.9, 0.2, 0.3, 0.4], "doc3".to_string());
+    db.add_embedding(vec![0.4, 0.2, 0.3, 0.4], "doc4".to_string());
 
-    let query = vec![0.1, 0.2, 0.7];
+    let query = vec![0.8, 0.2, 0.3, 0.4];
     let result = db.search(&query).expect("No records found");
 
     // Encode the public values of the program.
     sp1_zkvm::io::commit::<Vec<f64>>(&query);
     sp1_zkvm::io::commit::<Vec<f64>>(&result.embedding());
 
-    println!("Found result {}", result.value());
+    println!("Program found result {}", result.value());
 }
