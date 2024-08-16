@@ -1,0 +1,61 @@
+.link-list-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    gap: 16px; /* Adds space between the blocks */
+    justify-content: space-around; /* Centers items with space around them */
+}
+
+.link-container {
+    padding: 8px;
+    display: flex;
+    flex-direction: column; /* Ensure the content inside is vertically aligned */
+    align-items: flex-start;
+    border-radius: 4px;
+    border: 1px solid var(--borderMain, #ccc);
+    transition: background-color 0.3s ease-in-out;
+    width: 200px; /* Fixed width for each block */
+    box-sizing: border-box;
+    margin-bottom: 8px;
+}
+
+.link-container:hover {
+    background-color: var(--bgColorHover, #e0e0e0); /* Darkened background color on hover */
+}
+
+.link-icon-container {
+    display: flex;
+    flex-direction: column; /* Ensure the content inside is vertically aligned */
+    gap: var(--spacing-sm);
+    width: 100%;
+}
+
+.link-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.link-title {
+    font-family: 'Sans-serif', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    width: 100%;
+    color: #1C333A;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.link-description {
+    font-family: 'Sans-serif', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--textOff, #888);
+    margin-top: var(--spacing-xs);
+    line-height: 1.2;
+    width: 100%;
+}

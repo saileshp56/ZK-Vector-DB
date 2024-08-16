@@ -1,0 +1,49 @@
+.bar-container {
+    width: 100%;
+    padding: 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    align-self: center;
+}
+
+.textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Sans-serif', sans-serif;
+    font-size: 18px;
+    border: none;
+    box-sizing: border-box;
+    resize: none; /* Disable manual resizing */
+    outline: none;
+    overflow: hidden; /* Hide scrollbar */
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+}
+
+.column {
+    flex: 1;
+    padding: 16px;
+    padding-top: 2px;
+    text-align: right;
+}
+
+.column-text {
+    text-decoration: underline;
+    padding: 0px;
+    margin: 0px;
+
+
+}
+.column-text:hover {
+    cursor: pointer;
+    
+}
+
+.column:first-child {
+    border-left: none;
+}

@@ -1,0 +1,107 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+.main-content {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  align-items: center;
+  }
+  
+  .sm-width {
+  width: 80%;
+  }
+  
+  .lg-width {
+  width: 50%;
+  }
+  
+  .banner {
+      font-size: 5em;
+      --rem: 16;
+      position: relative;
+      cursor: default;
+      margin: 2em auto;
+      margin-top: 30px;
+      margin-bottom: 0px;
+      width: 80%;
+      background: #16717a;
+      color: #fff;
+      border: 6px double white;
+      padding: 0.25em;
+      max-width: 80%;
+      display: flex; /* Use flexbox */
+      align-items: center; /* Center items vertically */
+      justify-content: center; /* Center items horizontally */
+  }
+  
+  .about-link {
+      color: rgb(34 197 94);
+      text-decoration: underline;
+      width: 100%;
+  
+  }
+  
+  .about-body {
+      font-family: Georgia, Cambria, serif;
+      margin: 2em auto;
+      font-size: 18px;
+      line-height: 30px;
+      /* border: 6px double #16717a; */
+      padding-left: 10px;
+      padding-top: 10px;
+      width: 100%;
+  }
+  
+  .banner img {
+      width: 100px; /* Set the width of the image */
+      height: auto; /* Maintain the aspect ratio */
+  
+  }
+  
+  .about-title {
+      text-align: center;
+      color: rgb(34 197 94);
+      margin: 0; /* Remove default margin */
+  }
+  
+  .about-docs {
+      margin: 1em auto;
+      font-size: 30px;
+      line-height: 30px;
+      text-align: center;
+  }
+  
+  .about-docs h1 {
+      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+      font-style: normal;
+      font-weight: 600;
+      margin-top: 0;
+      font-size: 2.0571429rem;
+      margin-bottom: .21999rem;
+      padding-top: .78001rem;
+  
+  }
+  
+  .about-docs p {
+      padding-top: .66001rem;
+      margin-bottom: 1.33999rem;
+  
+  }
+  
+  .about-docs pre {
+      font-family: Georgia, Cambria, serif;
+  
+     
+  
+  }
+  
+  
+  .about-ul {
+      margin-bottom: 1.33999rem;
+  
+  }
