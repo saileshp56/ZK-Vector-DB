@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import "../styles/Bar.css";
 
-const Bar = () => {
+const Bar = ({searchHandler}) => {
     const [text, setText] = useState('');
-
-    const searchHandler = () => {
-        console.log("bar is filled with text:", text)
-    }
 
     const handleInputChange = (e) => {
         setText(e.target.value);
@@ -27,7 +23,7 @@ const Bar = () => {
                 <div className="column"></div>
                 <div className="column"></div>
                 <div className="column">
-                    <p className="column-text" onClick={searchHandler}>Search</p>
+                    <p className="column-text" onClick={() => {searchHandler(text)}}>Search</p>
                     </div>
             </div>
         </div>

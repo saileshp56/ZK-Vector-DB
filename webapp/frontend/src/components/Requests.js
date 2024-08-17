@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import "../styles/Request.css"
 
-const Requests = ({ question }) => {
+const Requests = ({ question, showSources }) => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
+
+    useEffect(() => {
+        showSources(data)
+    }, [data])
 
     const askQuestion = async () => {
         try {
@@ -32,8 +37,7 @@ const Requests = ({ question }) => {
     }, [question]);
 
     return (
-        <div>
-            <h1>Requests</h1>
+        <div className="request-body">
             {error ? (
                 <div>Error: {error}</div>
             ) : data ? (
