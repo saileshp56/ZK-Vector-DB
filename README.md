@@ -94,3 +94,19 @@ Execute the proving script
 ```bash
 /vectordb/script$    RUST_LOG=info cargo run --release
 ```
+
+### How to run Webapp
+You need to have (ollama)[https://ollama.com/download] installed and running
+#### Frontend
+```
+cd frontend
+npm i
+npm run start
+```
+
+#### Backend
+```
+cd backend
+npm i
+node app.js
+```
