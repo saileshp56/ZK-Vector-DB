@@ -96,7 +96,7 @@ Execute the proving script
 ```
 
 ### How to run Webapp
-You need to have (ollama)[https://ollama.com/download] installed and running
+You need to have [ollama](https://ollama.com/download) installed and running
 #### Frontend
 ```
 cd frontend
